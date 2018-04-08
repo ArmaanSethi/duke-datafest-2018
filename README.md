@@ -6,7 +6,7 @@ Repository for code, data, and figures made during Duke ASA Datafest 2018
 
 
 
-
+Figures below are sampled with 10,000 data points
 ### Salary
 
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/salary.png)
