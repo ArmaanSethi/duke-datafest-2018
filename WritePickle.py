@@ -5,7 +5,8 @@ from tqdm import tqdm
 # experienceRequired = {} 
 # salaryArray = {}
 # companyRating = {}
-wordCount = {}
+clicks = {}
+jobage = {}
 with open('datafest2018.csv', encoding = "utf8") as csvDataFile:
 	csvReader = csv.reader(csvDataFile)
 	for idx,row in tqdm(enumerate(csvReader)):
@@ -15,50 +16,20 @@ with open('datafest2018.csv', encoding = "utf8") as csvDataFile:
 			country = row[3]
 			jobID = row[2]
 			companyID = row[1]
-			# experience = row[13]
-			# if experience == "":
-			# 	experience = 0
-			# #print(experience)
-			# if(country == 'US'):
-			# 	if jobID in experienceRequired:
-			# 		if experienceRequired[jobID] == 0:
-			# 			experienceRequired[jobID] = experience
-			# 	else: 
-			# 		experienceRequired[jobID] = experience
-
-			# salary = row[14]
-			# if (country == 'US'):
-			# 	if jobID in salaryArray:
-			# 		if salary > salaryArray[jobID]:
-			# 			salaryArray[jobID] = salary
-			# 	else:
-			# 		salaryArray[jobID] = salary
-
-			# cRating = row[6]
-			# if cRating == "":
-			# 	cRating = 0;
-			# if (country == 'US'):
-			# 	if float(cRating) > -0.1:
-			# 		if jobID in companyRating:
-			# 			if cRating > companyRating[jobID]:
-			# 				companyRating[jobID] = cRating
-			# 		else:
-			# 			companyRating[jobID] = cRating
-
-			words = row[12]
+			click = int(row[21])
+			age = int(row[20])
 			if (country == 'US'):
-				if jobID in wordCount:
-					if words > wordCount[jobID]:
-						wordCount[jobID] = words
+				if jobID in clicks:
+					if jobage[jobID] < age:
+						jobage[jobID] = age
+					clicks[jobID] += click
 				else:
-					wordCount[jobID] = words
+					clicks[jobID] = click
+					jobage[jobID] = age
 
 
-
-# pickle.dump(experienceRequired, open("experience.p", "wb"))
-# pickle.dump(salaryArray, open("salary.p", "wb"))
-# pickle.dump(companyRating, open("companyRating.p", "wb"))
-pickle.dump(wordCount, open("wordCount.p", "wb"))
+pickle.dump(clicks, open("clicks.p", "wb"))
+pickle.dump(jobage, open("jobage.p", "wb"))
 
 
 

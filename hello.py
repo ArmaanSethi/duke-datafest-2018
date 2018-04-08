@@ -5,27 +5,32 @@ import re
 import csv
 import datetime
 
-dates = pickle.load( open( "dates.p", "rb"))
-duration = pickle.load( open( "duration.p", "rb"))
-dbc = pickle.load( open("days_between_clicks.p", "rb"))
+#dates = pickle.load( open( "dates.p", "rb"))
+#duration = pickle.load( open( "duration.p", "rb"))
+#dbc = pickle.load( open("days_between_clicks.p", "rb"))
 experience = pickle.load( open("experience.p", "rb"))
-# salary = pickle.load( open("salary.p", "rb"))
-# companyRating = pickle.load( open("companyRating.p", "rb"))
-# wordCount = pickle.load( open("wordCount.p", "rb"))
+salary = pickle.load( open("salary.p", "rb"))
+#companyRating = pickle.load( open("companyRating.p", "rb"))
+wordCount = pickle.load( open("wordCount.p", "rb"))
+jobAgeCount = pickle.load( open("jobage.p", "rb"))
+clicks = pickle.load( open("clicks.p", "rb"))
+#hoc = pickle.load( open("hoc.p", "rb"))
+#category = pickle.load( open("category.p", "rb"))
 count = 0
+#cats = ['STEM', 'Business','Little/No Education', 'Liberal Arts', 'Technical', 'uncategorized']
 # print(len(duration))
 # print(len(companyRating))
-for d in duration.keys():
-# for d in companyRating.keys():
-	if int(re.search(r'\d+', str(duration[d])).group()) < 99:
-		count = count + 1
-		plt.scatter(int(re.search(r'\d+', str(duration[d])).group()), experience[d])
-		# plt.scatter(int(re.search(r'\d+', str(duration[d])).group()), salary[d])
-		# plt.scatter(int(re.search(r'\d+', str(duration[d])).group()), companyRating[d])
-		# plt.scatter(int(re.search(r'\d+', str(duration[d])).group()), wordCount[d])
-		if count == 10000:
-			print("reach 1k")
-			break
-		if count%1000 == 0:
-			print("reach " + str(count/1000) + "k")
+#print(hoc.keys())
+#print(hoc.values())
+for d in clicks.keys():
+	count = count + 1
+	if jobAgeCount[d] != 0:
+		plt.scatter(experience[d], clicks[d]/jobAgeCount[d])
+
+	#int(re.search(r'\d+', str(d)).group())
+	if count == 10000:
+		print("reach 1k")
+		break
+	if count%1000 == 0:
+		print("reach " + str(count/1000) + "k")
 plt.show()
