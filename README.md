@@ -1,28 +1,28 @@
 # duke-datafest-2018
 
-##Justin Mott, Armaan Sethi, Zohair Zia, Jerry Pan, August Ning
+## Justin Mott, Armaan Sethi, Zohair Zia, Jerry Pan, August Ning
 
 Repository for code, data, and figures made during Duke ASA Datafest 2018
 
 
 
 
-####Salary
+### Salary
 
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/salary.png)
 
 
-###Compay Rating
+### Compay Rating
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/companyRating10k.png)
 
 
-###Experiance
+### Experiance
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/experience10k.png)
 
 
-###Salary
+### Salary
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/salary110k.png)
 
 
-###Word Count
+### Word Count
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/wordCount10k.png)
