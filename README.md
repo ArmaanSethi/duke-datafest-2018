@@ -2,4 +2,4 @@
 
 Justin Mott, Armaan Sethi, Zohair Zia, Jerry Pan, August Ning
 
-Repository for code, data, and figures made during Duke's ASA Datafest 2018
+Repository for code, data, and figures made during Duke ASA Datafest 2018
