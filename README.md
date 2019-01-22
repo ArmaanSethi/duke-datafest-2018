@@ -12,11 +12,11 @@ Figures below are sampled with 10,000 data points
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/salary.png)
 
 
-### Compay Rating
+### Company Rating
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/companyRating10k.png)
 
 
-### Experiance
+### Experience
 ![alt text](https://raw.githubusercontent.com/ArmaanSethi/duke-datafest-2018/master/images/experience10k.png)
 
 
